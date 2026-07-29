@@ -1,0 +1,68 @@
+*{
+    background-color: black;
+}
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20vh;
+    border-radius: 220px ;
+    border-style: solid;
+    background:grey;
+    color: white;
+    padding:0;
+    margin:0;
+}
+nav{
+    width: 100%;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap:40px;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    display:inline-block
+}
+nav ul li a{
+    color:blue;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    transition:0.4s;
+}
+nav ul li a i{
+    color: #8fd3ff;
+    margin-right: 8px;
+    font-size: 18px;
+}
+#ABOUT-US{
+    color:white ;
+}
+.p{
+    color:blue;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#containerII{
+     color: white;
+     padding: 20px;
+     border-radius:50px;
+    animation: colorChangge 4s ease-in-out infinite;}
+    @keyframes colorChangge{
+        0%{background:purple;}
+        33%{background:blue;}
+        66%{background:purple;}
+        100%{background:darkblue;}   
+    }
+    .fa-heart{
+      color: yellow;
+      font-size: 30px;
+    }
