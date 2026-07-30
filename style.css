@@ -73,5 +73,8 @@ nav ul li a i{
     .contact-box{
         display: flex;
         align-items: center;
-        gap: 15px;
+        gap: 25px;
+        border-color:gold;
+        border-radius: 20px;
+        border-style: ridge;
     }
