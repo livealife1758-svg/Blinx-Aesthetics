@@ -66,3 +66,12 @@ nav ul li a i{
       color: yellow;
       font-size: 30px;
     }
+    .contact-box i{
+        color: gold;
+        font-size: 35px;
+    }
+    .contact-box{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
