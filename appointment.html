@@ -15,11 +15,11 @@
             Schedule your appointment with Blinx Aesthetics. <br>
             Fill in the details to confirm your appointment.
         </p>
-        <form action="https://formspree.io/f/meeywqgj" method="post" class="appointment-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="tel" placeholder="Phone Number" required>
-            <input type="email" placeholder="Email Address" required>
-            <select required>
+        <form action="https://formspree.io/f/meeywqgj" method="POST" class="appointment-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <select name="treatment" required>
                 <option value="">Select Treatment</option>
                 <option>Hydration Facial</option>
                 <option>Acne Treatment</option>
@@ -35,6 +35,6 @@
             <a href="index.html">HOME</a>
         </footer>
     </section>
-    <script src="script.js"></script>
+    
 </body>
 </html>
