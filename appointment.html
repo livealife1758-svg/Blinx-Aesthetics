@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Appoinment</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome
+/6.7.2/css/all.min.css">
 </head>
 <body>
-    <section id appointment-container>
-        <h1 id="containerII">
+
+        <h1 id="containerII" class="scroll-reveal">
             BOOK AN APPOINTMENT
         </h1>
         <p class="p">
@@ -16,12 +18,12 @@
             Fill in the details to confirm your appointment.
         </p>
         <form action="https://formspree.io/f/meeywqgj" method="POST" class="appointment-form">
-            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="text" name="name" placeholder="Your Name" required >
             <input type="tel" name="phone" placeholder="Phone Number" required>
             <input type="email" name="email" placeholder="Email Address" required>
             <select name="treatment" required>
-                <option value="">Select Treatment</option>
-                <option>Hydration Facial</option>
+                <option multiple>Select Treatment</option>
+                <option multiple>Hydration Facial</option>
                 <option>Acne Treatment</option>
                 <option>Chemical Peel</option>
                 <option>Microneedling</option>
@@ -30,11 +32,13 @@
             </select>            <br><br>
             <button type="submit" class="book" style="color: blue;">Book Appointment</button>
         </form> <br>
+        <p class="p">For more information, contact us at ==> <a href="contact.html">Blinx Contact</a></p>
         <footer style="color: white;">
             ©2026 Blinx Aesthetics. <br>
             <a href="index.html">HOME</a>
         </footer>
-    </section>
+    
+    <script src="script.js" ></script>
     
 </body>
 </html>

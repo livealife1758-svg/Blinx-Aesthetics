@@ -2,23 +2,14 @@
     background-color: black;
 }
 #container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 20vh;
-    border-radius: 50px ;
-    border-style: solid;
-    background:grey;
-    color: white;
-    padding:0;
-    margin:0;
+ 
 }
-nav{
-    width: 100%;
-    
-    display: flex;
-    justify-content: start;
-    align-items: start;
+.home-nav{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 20px;
+   align-items: center;
 }
 nav ul{
     list-style: none;
@@ -33,22 +24,14 @@ nav ul li{
 nav ul li a{
     color:blue;
     text-decoration: underline;
-    font-size: 18px;
+    font-size: 23px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     transition:0.4s;
 }
-nav ul li a i{
-    color: #8fd3ff;
-    margin-right: 8px;
-    font-size: 18px;
-}
-#ABOUT-US{
-    color:white ;
-}
 .p{
     color:blue;
-    font-size: 18px;
+    font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
     
 }
@@ -57,17 +40,26 @@ nav ul li a i{
      padding: 20px;
      border-radius:50px;
      text-align: center;
-    animation: colorChangge 4s ease-in-out infinite;}
-    @keyframes colorChangge{
-        0%{background:purple;}
-        33%{background:blue;}
-        66%{background:purple;}
-        100%{background:darkblue;}   
+     width: 100%;
+     box-sizing: border-box;
+    animation: colorChange 5s ease-in-out infinite;}
+    @keyframes colorChange{
+        0%{background:blue;}
+        33%{background:purple;}
+        66%{background:darkblue;}
+        100%{background:blue;}
+
 
     }
-    .fa-heart{
-      color: yellow;
-      font-size: 30px;
+
+    i{
+        color: gold;
+        font-size: 35px;
+    }
+
+    .containerII i{
+        color: gold;
+        font-size: medium;
     }
     .contact-box i{
         color: gold;
@@ -80,6 +72,7 @@ nav ul li a i{
         border-color:gold;
         border-radius: 20px;
         border-style: ridge;
+        color: blue;
     }
     .appointment-form input, .appointment-form select{
        width: 100%;
@@ -98,7 +91,7 @@ nav ul li a i{
     .appointment-form input:focus, .appointment-form select:focus{
         border-color: dodgerblue;
         box-shadow: 0 0 15px dodgerblue;
-        
+            
     }
     
     .book{
@@ -126,14 +119,118 @@ nav ul li a i{
         flex-direction:column ;
         gap: 20px;
         margin-top: 30px auto;
-        
-
-        
     }
+
     .appointment-form input::placeholder, select{
         color:#d9d9d9;
         text-align: center;
     }
-   
-   
 
+  body{
+    animation: blinxPageEnter 1.2s ease-out;
+    position: relative;
+    overflow-x:hidden ;
+  }
+
+  body::after{
+    background: #d4af37;
+    bottom: 5%;
+    right: -150px;
+    animation: blinxGoldGlow2 12s ease-in infinite alternate;
+  }
+  body::before{
+    background: blue;
+    top: 10%;
+    left: -150px;
+    animation: blinxGoldGlow 10s ease-in-out infinite alternate;
+  }
+
+  @keyframes blinxGoldGlow {
+    0%{
+        transform: translate(0,0);
+    }    
+    50%{
+        transform: translate(180px, 100px);
+    }
+    100%{
+        transform: translate(180px, 100px);
+    }
+    
+  }
+
+  body::after,
+  body::before{
+    content:"";
+    position: fixed;
+    width: 280px;
+    height: 280px;
+    border-radius:50% ;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(100px);
+
+
+  }
+ 
+#pp{
+     width: fit-content;
+        padding: 18px;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 102, 255, 0.5);
+}
+#pp:hover{
+     transform: scale(1.02);
+        box-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+}
+
+#scroll-reveal{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+#scroll-reveal.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin:0 auto ;
+    padding: 20px;
+    gap: 25px;
+    max-width: 1100px;     
+}
+
+@media (max-width:768px) {.service-container{
+    grid-template-columns: repeat(2, 1fr);
+}}
+    
+@media(max-width:480px) {
+    .service-container{grid-template-columns: 1fr;}
+}
+
+.service-box{
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    height: 250px;
+    
+}
+
+.service-header{
+    position:sticky;
+     z-index: 1;
+     width:100%;
+     top: 0px;
+     left: 0;
+     box-sizing: border-box;
+}
